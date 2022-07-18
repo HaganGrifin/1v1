@@ -39,13 +39,20 @@ dialog_b_h = choice(dialoges_b_h)
 dialoges_h_h = ['You both back away and heal. You each gain 10 health.\n ', 'You each use a bandage and gain 10 health.\n ', 'You both retreat and heal, gaining 10 health each.\n ']
 dialog_h_h = choice(dialoges_h_h)
 
+dialoges_a_p = ['You attack the knight, but he musters all his might, and blasts your sword out of your hand and striking home. You lost 20 health.\n ', 'You lunge at the kngiht, but he binds your sword and slices your arm. You lost 20 health.\n ', 'You swing at the knight, but he over-powers you and strikes you instead. You lost 20 health.']
+dialog_a_p = choice(dialoges_a_p)
 
+dialoges_b_p = ['The knight swings with all his might at you, but you bring your trusty shield up and block his attack.\n ', 'The knight charges at you, but you bring your shield up just in time to stop his massive blow.\n ', 'The knight attacks with all his might, but you block him with you ever protective shield.\n ']
+dialog_b_p = choice(dialoges_b_p)
+
+dialoges_h_p = ['You back away and heal, but the knight swings with all his might and strikes you, dealing 10 damage.\n ', 'You retreat and heal, but the knight seizes the opportunity and attacks, dealing 10 damage.\n ', 'You back away and heal up, but the knight attacks and strikes you, dealing 10 damage.\n ']
+dialog_h_p = choice(dialoges_h_p)
 
 while p_health > 0 and e_health > 0:
     
     inp = input('What is your next choice? ')
 
-    fight = ['Attacked', 'Attacked', 'Attacked', 'Attacked', 'Blocked', 'Blocked', 'Blocked', 'Blocked', 'Missed', 'Missed', 'Healed', 'Healed']
+    fight = ['Attacked', 'Attacked', 'Attacked', 'Attacked', 'Blocked', 'Blocked', 'Blocked', 'Blocked', 'Missed', 'Missed', 'Healed', 'Healed', 'Power Attacked', 'Power Attacked']
     ai = choice(fight)
 
     if inp == 'attack' and ai == 'Attacked':
@@ -82,6 +89,14 @@ while p_health > 0 and e_health > 0:
         print(dialog_h_h)
         p_health += 10
         e_health += 10
+    elif inp == 'attack' and ai == 'Power Attacked':
+        print(dialog_a_p)
+        p_health -= 20
+    elif inp == 'block' and ai == 'Power Attacked':
+        print(dialog_b_p)
+    elif inp == 'heal' and ai == 'Power Attacked':
+        print(dialog_h_p)
+        p_health -= 10
     else:
         print('That is not an option. Try again.')
 
