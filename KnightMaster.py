@@ -55,8 +55,20 @@ dialog_h_p = choice(dialoges_h_p)
 # Introduction and How to Play:
 
 print('''
+                \        / !**** !     !**** !****! !\  /! !****   **!** !****! o
+                 \  /\  /  !---- !     !     !    ! ! \/ ! !----     !   !    !
+                  \/  \/   !____ !____ !____ !____! !    ! !____     !   !____! o
+
+!    / !\    ! **!** !*****  !     ! ***!*** !\    /!     /\    !******  ***!*** !****** !******! !*!
+!   /  ! \   !   !   !       !     !    !    ! \  / !    /  \   !           !    !       !      ! ! !
+!--<   !  \  !   !   !       !-----!    !    !  \/  !   /----\  !******!    !    !------ !______! ! !
+!   \  !   \ !   !   !  ***! !     !    !    !      !  /      \        !    !    !       !    \   !_!
+!    \ !    \! __!__ !_____! !     !    !    !      ! /        \ ______!    !    !______ !     \  [_]
+''')
+
+print('''
 How to play:
-Welcome to Knight Master! In this game, you will fight an opposing knight until one of you is the victor. To play, you must choose between "attack", "block", or "heal". Healing will regain 10 health points if executed correctly. Have fun and good luck!
+Welcome to Knight Master! In this game, you will fight an opposing knight until one of you is the victor. To play, you must choose between "attack", "block", or "heal". Healing will regain 20 health points if executed correctly. Have fun and good luck!
 ''')
 
 # Actual Game:
@@ -126,22 +138,18 @@ while p_health > 0 and e_health > 0:
 
 if e_health <= 0:
     print('''
-        
-        
-        
-    You have won! Congratulations!
-        
-        
-        
-    ''')
+
+ \   / !****! !    !    \        / **!** !\  ! !!
+  \_/  !    ! !    !     \  /\  /    !   ! \ ! !!
+   !   !____! !____!      \/  \/   __!__ !  \! []
+
+''')
 
 if p_health <= 0:
     print('''
-        
-        
-        
-    You have lost! Try again.
-        
-        
-        
-    ''')
+
+ \   / !****! !    !    !     !****! !**** !****      **!** !****! \   /     /\   !****    /\   **!** !\  ! 
+  \_/  !    ! !    !    !     !    ! !___  !----        !   !****!  \_/     /--\  !  __   /--\    !   ! \ ! 
+   !   !____! !____!    !____ !____! ____! !____ []     !   !    \   !     /    \ !____! /    \ __!__ !  \! []
+
+''')
