@@ -8,6 +8,22 @@ p2_health = 100
 # Introduction and How to Play:
 
 print('''
+                \        / !**** !     !**** !****! !\  /! !****   **!** !****! o
+                 \  /\  /  !---- !     !     !    ! ! \/ ! !----     !   !    !
+                  \/  \/   !____ !____ !____ !____! !    ! !____     !   !____! o   
+
+!    / !\    ! **!** !*****  !     ! ***!*** !\    /!     /\    !******  ***!*** !****** !******! !*!
+!   /  ! \   !   !   !       !     !    !    ! \  / !    /  \   !           !    !       !      ! ! !
+!--<   !  \  !   !   !       !-----!    !    !  \/  !   /----\  !******!    !    !------ !______! ! !
+!   \  !   \ !   !   !  ***! !     !    !    !      !  /      \        !    !    !       !    \   !_!
+!    \ !    \! __!__ !_____! !     !    !    !      ! /        \ ______!    !    !______ !     \  [_]
+
+              !\  /! !    ! !     **!** **!** !****! !       /\   \   / !**** !****! !
+              ! \/ ! !    ! !       !     !   !____! !      /--\   \_/  !---- !____! !
+              !    ! !____! !____   !   __!__ !      !____ /    \   !   !____ !   \  o
+''')
+
+print('''
 How to play:
 Welcome to Knight Master Multiplayer! In this game, you will fight your friend (the opposing knight) until one of you is the victor. To play, you must each choose between "attack up", "attack down", "attack forward", "block", or "heal". "attack up" beats "attack down", "attack down" beats "attack forward", "attack forward" beats "attack up", and "block" blocks all attacks. Healing will regain 20 health points if executed correctly. Have fun and good luck!
 ''')
@@ -17,7 +33,7 @@ Welcome to Knight Master Multiplayer! In this game, you will fight your friend (
 while p1_health > 0 and p2_health > 0:
     
     inp = input('Player 1, what is your choice? ')
-    inp2 = input('Player 2, what is your choice? ')
+    inp2 = input('\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n Player 2, what is your choice? ')
 
     if inp == 'attack up' and inp2 == 'attack up':
         print('\nYour swords clash and no one rises the victor.\n ')
@@ -87,9 +103,9 @@ while p1_health > 0 and p2_health > 0:
         p2_health += 20
     else:
         print('That is not an option. Try again.\n ')
-
-    print('''Player 2's health is: ''' + str(p2_health))
+    
     print('''Player 1's health is: ''' + str(p1_health))
+    print('''Player 2's health is: ''' + str(p2_health))
     print(' ')
 
     if p1_health <= 0:
@@ -101,22 +117,18 @@ while p1_health > 0 and p2_health > 0:
 
 if p2_health <= 0:
     print('''
-        
-        
-        
-    Player 2 wins! Congratulations!
-        
-        
-        
-    ''')
+
+!****! !       /\   \   / !**** !****!    /!     \        / **!** !\  ! !****  !!
+!____! !      /--\   \_/  !---- !____!     !      \  /\  /    !   ! \ ! !____  !!
+!      !____ /    \   !   !____ !   \    __!__     \/  \/   __!__ !  \!  ____! []
+
+''')
 
 if p1_health <= 0:
     print('''
-        
-        
-        
-    Player 1 wins! Congradulations!
-        
-        
-        
-    ''')
+
+!****! !       /\   \   / !**** !****!   ****!   \        / **!** !\  ! !****  !!
+!____! !      /--\   \_/  !---- !____!   ____!    \  /\  /    !   ! \ ! !____  !!
+!      !____ /    \   !   !____ !   \   !____      \/  \/   __!__ !  \!  ____! []
+
+''')
